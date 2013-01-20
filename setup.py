@@ -40,11 +40,11 @@ setup(
         'License :: OSI Approved :: BSD License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Internet :: WWW/HTTP'
     ],
     entry_points="""
     [console_scripts]
-    yokk = yokk.server:main
+    jokk = jokk.server:main
     """,
     tests_require=[],
     test_suite='tests'
