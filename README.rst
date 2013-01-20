@@ -5,7 +5,7 @@ RESTful mock api server.
 
 `Jokk` is heavily inspiered by `EasyMock <https://github.com/cyberagent-jp/node-easymock>`_.
 
-.. image:: https://secure.travis-ci.org/heavenshell/py-yokk.png
+.. image:: https://travis-ci.org/heavenshell/py-jokk.png?branch=master
 
 Installation
 ------------
