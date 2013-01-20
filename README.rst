@@ -7,6 +7,9 @@ RESTful mock api server.
 
 .. image:: https://travis-ci.org/heavenshell/py-jokk.png?branch=master
 
+- `Repository <https://github.com/heavenshell/py-jokk/>`_
+- `Documentation <https://jokk.readthedocs.org/en/latest/>`_
+
 Installation
 ------------
 

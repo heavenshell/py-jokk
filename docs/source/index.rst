@@ -22,6 +22,10 @@ RESTful mock api server.
 
 Naming of `Jokk` is inspiered by `JokkMokk <http://en.wikipedia.org/wiki/Jokkmokk>`_ because pronunciation is similar to `Mock`.
 
+
+- `Repository <https://github.com/heavenshell/py-jokk/>`_
+- `Documentation <https://jokk.readthedocs.org/en/latest/>`_
+
 Installation
 ------------
 
