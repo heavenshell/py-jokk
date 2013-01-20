@@ -1,0 +1,7 @@
+{
+  "data": "../data/basic",
+  "routes": [
+    "/user",
+    "/user/<userid>"
+  ]
+}

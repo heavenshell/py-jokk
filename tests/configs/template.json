@@ -1,0 +1,10 @@
+{
+  "data": "../data/template",
+  "variables" : {
+    "server": "http://example.com"
+  },
+  "routes": [
+    "/<userid>",
+    "/template"
+  ]
+}

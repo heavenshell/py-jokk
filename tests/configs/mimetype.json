@@ -1,0 +1,9 @@
+{
+  "data": "../data/mimetype",
+  "routes": [
+    "/json",
+    "/xml",
+    "/html",
+    "/txt"
+  ]
+}

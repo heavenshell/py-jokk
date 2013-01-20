@@ -1,0 +1,15 @@
+{
+  "data": "./data",
+  "cors": false,
+  "jsonp": true,
+  "variables": {
+    "server": "http://server.com"
+  },
+  "routes": [
+    "/",
+    "/user/<userid>",
+    "/user/<userid>/profile",
+    "/user/<userid>/inbox/<messageid>",
+    "/item"
+  ]
+}
