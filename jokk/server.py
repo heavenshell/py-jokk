@@ -109,8 +109,6 @@ class Jokk(object):
             template = Template(response)
             response = template.safe_substitute(**config['variables'])
 
-        #: If config.json contains `jsonp` and is true,
-        #: return jsonp callback.
         if 'jsonp' in config and config['jsonp'] is True:
             callback = request.args.get('callback', False)
             if callback:
