@@ -104,7 +104,7 @@ class Jokk(object):
         response, status, mimetype = self.create_response(request, args,
                                                           endpoint)
 
-        #: If config.json contains `variables` assing to response.
+        #: If config.json contains `variables` assign variable to response.
         if 'variables' in config:
             template = Template(response)
             response = template.safe_substitute(**config['variables'])
