@@ -269,7 +269,7 @@ def show_urls(app):
     """
     rules = sorted(app.url_map.iter_rules())
     for v in rules:
-        print v.endpoint
+        print(v.endpoint)
 
 
 def main():
