@@ -19,7 +19,11 @@ except:
 
 app_name = 'jokk'
 
-description = file(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
+rst_path = os.path.join(os.path.dirname(__file__), 'README.rst')
+description = ''
+with open(rst_path) as f:
+    description = f.read()
+
 setup(
     name=app_name,
     version='0.1',
