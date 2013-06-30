@@ -10,6 +10,7 @@
     :license: BSD, see LICENSE for more details.
 """
 import json
+from jokk._compat import to_unicode
 from . import TestBase
 
 
@@ -24,12 +25,12 @@ class TestTemplate(TestBase):
         """ Routes /<userid> url vars should assing to response body. """
         client = self._create_client('template.json')
         res = client.get('/foo')
-        text = json.loads(res.data)['message']
+        text = json.loads(to_unicode(res.data))['message']
         self.assertEqual(text, 'foo')
 
     def test_variable_assign_to_response_file(self):
         """ Variables should assign to response body. """
         client = self._create_client('template.json')
         res = client.get('/template')
-        text = json.loads(res.data)['server']
+        text = json.loads(to_unicode(res.data))['server']
         self.assertEqual(text, 'http://example.com')

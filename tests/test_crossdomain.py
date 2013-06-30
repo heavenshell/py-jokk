@@ -10,6 +10,7 @@
     :license: BSD, see LICENSE for more details.
 """
 import os
+from jokk._compat import to_unicode
 from . import TestBase
 
 
@@ -29,7 +30,7 @@ class TestCrossdomain(TestBase):
         client = self._create_client('jsonp_true.json')
         res = client.get('/user')
         data = self._read_json('user_get.json')
-        self.assertEqual(res.data, 'function({0})'.format(data))
+        self.assertEqual(to_unicode(res.data), 'function({0})'.format(data))
 
     def test_jsonp_true_callback(self):
         """
@@ -38,7 +39,7 @@ class TestCrossdomain(TestBase):
         client = self._create_client('jsonp_true.json')
         res = client.get('/user?callback=callback')
         data = self._read_json('user_get.json')
-        self.assertEqual(res.data, 'callback({0})'.format(data))
+        self.assertEqual(to_unicode(res.data), 'callback({0})'.format(data))
 
     def test_jsonp_false(self):
         """
@@ -47,7 +48,7 @@ class TestCrossdomain(TestBase):
         client = self._create_client('jsonp_false.json')
         res = client.get('/user')
         data = self._read_json('user_get.json')
-        self.assertEqual(res.data, data)
+        self.assertEqual(to_unicode(res.data), data)
 
     def test_cors_true(self):
         """

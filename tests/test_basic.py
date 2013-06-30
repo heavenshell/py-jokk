@@ -11,6 +11,7 @@
 """
 import os
 from jokk.server import Jokk
+from jokk._compat import to_unicode
 from . import TestBase, paramterized
 
 
@@ -41,82 +42,82 @@ class TestBasic(TestBase):
         client = self._create_client('basic.json')
         res = client.get('/user')
         expected = self._read_json('basic/user_get.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_post_request(self):
         """ POST /user should serve user_post.json """
         client = self._create_client('basic.json')
         res = client.post('/user')
         expected = self._read_json('basic/user_post.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_put_request(self):
         """ PUT /user should serve user_put.json """
         client = self._create_client('basic.json')
         res = client.put('/user')
         expected = self._read_json('basic/user_put.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_delete_request(self):
         """ DELETE /user should serve user_put.json """
         client = self._create_client('basic.json')
         res = client.delete('/user')
         expected = self._read_json('basic/user_delete.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_head_request(self):
         """ HEAD /user should serve empty body. """
         client = self._create_client('basic.json')
         res = client.head('/user')
-        self.assertEqual(res.data, '')
+        self.assertEqual(to_unicode(res.data), '')
 
     def test_patch_request(self):
         """ PATCH /user should serve user_put.json """
         client = self._create_client('basic.json')
         res = client.patch('/user')
         expected = self._read_json('basic/user_patch.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_get_request_remapped(self):
         """ GET /user/<userid> should serve userid_get.json. """
         client = self._create_client('basic.json')
         res = client.get('/user/1')
         expected = self._read_json('basic/user/userid_get.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_post_request_remapped(self):
         """ POST /user/<userid> should serve userid_post.json. """
         client = self._create_client('basic.json')
         res = client.post('/user/1')
         expected = self._read_json('basic/user/userid_post.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_put_request_remapped(self):
         """ PUT /user/<userid> should serve userid_put.json. """
         client = self._create_client('basic.json')
         res = client.put('/user/1')
         expected = self._read_json('basic/user/userid_put.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_delete_request_remapped(self):
         """ DELETE /user/<userid> should serve userid_put.json. """
         client = self._create_client('basic.json')
         res = client.delete('/user/1')
         expected = self._read_json('basic/user/userid_delete.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_head_request_remapped(self):
         """ HEAD /user/<userid> should serve empty body. """
         client = self._create_client('basic.json')
         res = client.head('/user/1')
-        self.assertEqual(res.data, '')
+        self.assertEqual(to_unicode(res.data), '')
 
     def test_patch_request_remapped(self):
         """ PATCH /user/<userid> should serve userid_patch.json. """
         client = self._create_client('basic.json')
         res = client.patch('/user/1')
         expected = self._read_json('basic/user/userid_patch.json')
-        self.assertEqual(res.data, expected)
+        self.assertEqual(to_unicode(res.data), expected)
 
     def test_get_status(self):
         """ GET /user should return 200. """
