@@ -5,7 +5,7 @@
 
     RESTful mock api server.
 
-    :copyright: (c) 2013 Shinya Ohyanagi, All rights reserved.
+    :copyright: (c) 2014 Shinya Ohyanagi, All rights reserved.
     :license: BSD, see LICENSE for more details.
 """
 import os
@@ -26,7 +26,7 @@ with open(rst_path) as f:
 
 setup(
     name=app_name,
-    version='0.1',
+    version='0.2',
     author='Shinya Ohyanagi',
     author_email='sohyanagi@gmail.com',
     url='http://github.com/heavenshell/py-jokk',

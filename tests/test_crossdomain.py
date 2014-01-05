@@ -6,7 +6,7 @@
     Cross-Domain tests for Jokk.
 
 
-    :copyright: (c) 2013 Shinya Ohyanagi, All rights reserved.
+    :copyright: (c) 2014 Shinya Ohyanagi, All rights reserved.
     :license: BSD, see LICENSE for more details.
 """
 import os
