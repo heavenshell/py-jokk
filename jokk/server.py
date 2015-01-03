@@ -12,7 +12,7 @@
 
     Jokk is heavily inspered by `EasyMock Server` written in Node.js.
 
-    :copyright: (c) 2014 Shinya Ohyanagi, All rights reserved.
+    :copyright: (c) 2014-2015 Shinya Ohyanagi, All rights reserved.
     :license: BSD, see LICENSE for more details.
 """
 import os
